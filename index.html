@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceCompare.io - Compare Prices & Find the Best Deals</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold text-indigo-600">
+                PriceCompare<span class="text-gray-900">.io</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#explore" class="hover:text-indigo-600 transition">Explore</a>
+                <a href="#compare" class="hover:text-indigo-600 transition">Compare</a>
+                <a href="#alerts" class="hover:text-indigo-600 transition">Price Alerts</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#admin" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-md font-medium transition">
+                    Admin Dashboard
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-indigo-900 to-indigo-800 text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                Compare Prices. Find the Best Deal.
+            </h1>
+            <p class="text-indigo-200 text-lg max-w-2xl mx-auto">
+                Search across top retailers instantly, track price changes, and grab the lowest verified prices online.
+            </p>
+            
+            <!-- Search Bar Form -->
+            <div class="pt-4">
+                <form id="search-form" class="relative w-full max-w-2xl mx-auto">
+                    <div class="flex items-center border border-gray-300 rounded-full shadow-sm bg-white overflow-hidden px-4 py-3 focus-within:ring-2 focus-within:ring-indigo-500">
+                        <i data-lucide="search" class="w-5 h-5 text-gray-400 mr-3"></i>
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Search for phones, laptops, TVs, headphones..."
+                            class="w-full outline-none text-gray-700 placeholder-gray-400 text-sm md:text-base bg-transparent"
+                        />
+                        <button
+                            type="submit"
+                            class="bg-indigo-600 text-white px-5 py-2 rounded-full font-medium text-sm hover:bg-indigo-700 transition"
+                        >
+                            Compare
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Popular Searches -->
+            <div class="flex flex-wrap justify-center items-center gap-2 text-xs text-indigo-200 pt-2">
+                <span class="font-semibold text-white">Popular Searches:</span>
+                <a href="#" class="underline hover:text-white">iPhone 16 128GB</a>
+                <span>•</span>
+                <a href="#" class="underline hover:text-white">Samsung Galaxy S25</a>
+                <span>•</span>
+                <a href="#" class="underline hover:text-white">MacBook Air M4</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Grid -->
+    <section id="explore" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse Categories</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+            <!-- Category Card -->
+            <a href="#" class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-indigo-500 hover:shadow-md transition group">
+                <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition mb-3">
+                    <i data-lucide="smartphone" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700 text-center">Mobiles</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-indigo-500 hover:shadow-md transition group">
+                <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition mb-3">
+                    <i data-lucide="laptop" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700 text-center">Laptops</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-indigo-500 hover:shadow-md transition group">
+                <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition mb-3">
+                    <i data-lucide="tv" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700 text-center">TVs</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-indigo-500 hover:shadow-md transition group">
+                <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition mb-3">
+                    <i data-lucide="headphones" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700 text-center">Electronics</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-indigo-500 hover:shadow-md transition group">
+                <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition mb-3">
+                    <i data-lucide="home" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700 text-center">Home Appliances</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-indigo-500 hover:shadow-md transition group">
+                <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition mb-3">
+                    <i data-lucide="shirt" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700 text-center">Fashion</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-indigo-500 hover:shadow-md transition group">
+                <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition mb-3">
+                    <i data-lucide="gamepad-2" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700 text-center">Gaming</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-indigo-500 hover:shadow-md transition group">
+                <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition mb-3">
+                    <i data-lucide="watch" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700 text-center">Accessories</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-20">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Trending Deals</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <div class="h-48 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569" alt="iPhone 16" class="object-cover h-full w-full rounded-md" />
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <h3 class="font-semibold text-gray-900 text-sm line-clamp-2">Apple iPhone 16 (128 GB) - Black</h3>
+                        <div class="flex items-center space-x-1 text-xs text-amber-500 font-medium">
+                            <span>★ 4.7</span>
+                            <span class="text-gray-400">(1,420 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                    <div>
+                        <div class="text-lg font-bold text-emerald-600">₹69,999</div>
+                        <div class="text-xs text-gray-400">Best at Demo Store A</div>
+                    </div>
+                    <a href="#" class="bg-indigo-600 text-white text-xs font-medium px-3 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Compare
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <div class="h-48 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf" alt="Galaxy S25" class="object-cover h-full w-full rounded-md" />
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <h3 class="font-semibold text-gray-900 text-sm line-clamp-2">Samsung Galaxy S25 5G (256 GB) - Icy Blue</h3>
+                        <div class="flex items-center space-x-1 text-xs text-amber-500 font-medium">
+                            <span>★ 4.6</span>
+                            <span class="text-gray-400">(890 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                    <div>
+                        <div class="text-lg font-bold text-emerald-600">₹74,999</div>
+                        <div class="text-xs text-gray-400">Best at Demo Store B</div>
+                    </div>
+                    <a href="#" class="bg-indigo-600 text-white text-xs font-medium px-3 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Compare
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6 text-center text-xs text-gray-500">
+        <p>&copy; 2026 PriceCompare.io. All rights reserved.</p>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+
+        // Simple interactive form handler
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = document.getElementById('search-input').value.trim();
+            if (query) {
+                alert('Searching for: ' + query);
+            }
+        });
+    </script>
+</body>
+</html>
